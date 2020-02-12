@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Shopping Cart</title>
+
+	<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+	<!-- ------------------------------ -->
+	<!--   Include CSS libraries here   -->
+	<!-- ------------------------------ -->
+
+	<link rel='stylesheet' type='text/css' href='static/inc/common.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="icon" href="static/images/icon.png">
+
+
+
+
+	<!-- ------------------------------ -->
+	<!--   Include JS libraries here    -->
+	<!-- ------------------------------ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src='static/inc/common.js'></script>
+</head>
+<body>
+<div id='body_content'>
+	<!-- The page header content -->
+	<div id='hd'>
+	<h1> &nbsp;Shopping Cart </h1>
+	</div>
+</div>
+	  
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a href="product.html">Products</a>
+  <a class="active" href="shoppingcart.html">Shopping Cart</a>
+</div>
+<!-- https://codepen.io/justinklemm/pen/zAdoJ -->
+	<!-- This is the body content -->
+	<div id='bd' class='content'>
+			<div class="container">
+					<table class="table">
+					  <tbody>
+						<tr>
+						<td><img src="static/images/sneakerBLack.jpg" alt="Sneaker"></td>
+						  <td>Sneakers</td>
+						  <td id="price">$99.99</td>
+						  <td> <label class="checkbox-inline"><input type="checkbox" value="">This is a gift</label> </td> 
+						  <td> Quantity:
+						  <input id="quantity-num" aria-label="Quantity" maxlength="2" max="99" min="1" type="number" >
+						</td>
+						  <td> <a href= #> Remove </a> </td>
+						  <td> <a href= #> Save for Later </a> </td>
+						</tr>
+						
+					  </tbody>
+					  <tr><td></td></tr>
+					</table>
+					<div class="subtotal-checkout">
+							<p id="subtotal-calculated">Subtotal: $99.99</p>
+				  <p><a href= 'checkout.html'>Proceed to checkout</a></p>
+			  </div>
+					
+				  </div>
+	
+	</div>
+
+
+	<!-- The page footer content -->
+	<div id='ft'>
+		<p>&copy; Esther Obodyanik</p>
+	</div>
+</div>
+</body>
+</html>
+
+

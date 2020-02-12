@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Products</title>
+
+	<meta http-equiv='Content-Type' content='text/html;charset=utf-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+	<!-- ------------------------------ -->
+	<!--   Include CSS libraries here   -->
+	<!-- ------------------------------ -->
+
+	<link rel='stylesheet' type='text/css' href='static/inc/common.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="icon" href="static/images/icon.png">
+
+	
+
+	<!-- ------------------------------ -->
+	<!--   Include JS libraries here    -->
+	<!-- ------------------------------ -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src='static/inc/common.js'></script></head>
+
+	<style>
+	html, body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+		font-family: 'Roboto', sans-serif;
+	  }
+	   
+	  .container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 15px;
+		display: flex;
+	  }
+	  .left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 60px;
+}
+.left-column img {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+.product-color {
+  margin-bottom: 30px;
+}
+ 
+.color-choose div {
+  display: inline-block;
+}
+ 
+.color-choose input[type=&quot;radio&quot;] {
+  display: none;
+}
+ 
+.color-choose input[type=&quot;radio&quot;] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+ 
+.color-choose input[type=&quot;radio&quot;] + label span {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+}
+ 
+.color-choose input[type=&quot;radio&quot;]#red + label span {
+  background-color: #C91524;
+}
+.color-choose input[type=&quot;radio&quot;]#blue + label span {
+  background-color: #314780;
+}
+.color-choose input[type=&quot;radio&quot;]#black + label span {
+  background-color: #323232;
+}
+ 
+.color-choose input[type=&quot;radio&quot;]:checked + label span {
+  background-image: url(images/check-icn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  background-color: #7DC855;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.cart-btn:hover {
+  background-color: #64af3d;
+}
+@media (max-width: 940px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+ 
+  .left-column img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .left-column img {
+    width: 220px;
+    top: -85px;
+  }
+}
+	  </style>
+<body>
+<div id='body_content'>
+	<!-- The page header content -->
+	<div id='hd'>
+		<h1>Products</h1>
+	</div>
+	<div id="navbar">
+			<a href="index.html">Home</a>
+			<a class="active" href="product.html">Products</a>
+			<a href="shoppingcart.html">Shopping Cart</a>
+		  </div>
+
+	<!-- This is the body content -->
+	<div id='bd'>
+		<main class="container">
+ 
+			<!-- Left Column / Product Image -->
+			<div class="left-column">
+				<img data-image="grey" class="active" src="static/images/sneakerGrey.jpg" alt="Sneaker">
+			  <img data-image="blue" class="active" src="static/images/sneakerBlue.jpg" alt="Sneaker">
+			  <img data-image="black" class="active" src="static/images/sneakerBLack.jpg" alt="Sneaker"> 
+			</div>
+		   
+		   
+			<!-- Right Column -->
+			<div class="right-column">
+		   
+			  <!-- Product Description -->
+			  <div class="product-description">
+				<span>Sneakers</span>
+				<h1>Sporty and Fun</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tristique diam ut tellus tincidunt finibus. Mauris vulputate placerat auctor. Quisque eleifend, nisl ac interdum consectetur, ante augue ultrices sem, quis congue felis est ut justo.</p>
+			  </div>
+		   
+			  <!-- Product Configuration -->
+			  <div class="product-configuration">
+		   
+				<!-- Product Color -->
+				<div class="product-color">
+				  <span>Color</span>
+		   
+				  <div class="color-choose">
+					<div>
+					  <input data-image="grey" type="radio" id="grey" name="color" value="red" checked>
+					  <label for="grey">Grey<span></span></label>
+					</div>
+					<div>
+					  <input data-image="blue" type="radio" id="blue" name="color" value="blue">
+					  <label for="blue">Blue<span></span></label>
+					</div>
+					<div>
+					  <input data-image="black" type="radio" id="black" name="color" value="black">
+					  <label for="black">Black<span></span></label>
+					</div>
+				  </div>
+		   
+				</div>
+		   
+			  <!-- Product Pricing -->
+			  <div class="product-price">
+				<span>$99.99</span>
+				<a href="shoppingcart.html" class="cart-btn">Add to cart</a>
+			  </div>
+			</div>
+		  </main>
+			</div>
+
+
+	<!-- The page footer content -->
+	<div id='ft'>
+			<p>&copy; Esther Obodyanik</p>
+</div>
+</body>
+</html>
+
+
